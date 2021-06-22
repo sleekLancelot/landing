@@ -36,15 +36,16 @@ li {
         line-height: 140%;
         margin-top: 22px;
     }
-    .cta {
+    .btn.cta {
         margin-top: 22px;
-        background: #FFCC17;
-        border-radius: 3px;
+        // background: #FFCC17;
+        // border-radius: 3px;
         width: 150px;
         height: 41.52px;
         display: grid;
         place-items: center;
-        font-weight: 600;
+        // font-weight: 600;
+        @include button($content: 'Contact us');
     }
 }
 
@@ -104,9 +105,11 @@ li {
         .service {
             width: 301px;
             .service-description {
-                font-weight: 600;
                 color: $dark-text;
                 margin: 14px 0 13px 0;
+                font-size: 15px;
+                letter-spacing: 0.01em;
+                line-height: 20.78px;
             }
             .service-cta {
                 display: flex;
