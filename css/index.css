@@ -1,0 +1,153 @@
+/** Variables **/
+/** Variables **/
+@media screen and (min-width: 900px) {
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    background: #6832D4;
+    height: 90px;
+    color: #E5E5E5;
+    font-size: 15px;
+    line-height: 18.68px;
+  }
+  nav .logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 20px;
+  }
+  nav .logo .circle {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background: #C4C4C4;
+    border-radius: 50%;
+    margin: auto 10px;
+  }
+  nav .desktopNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  nav .desktopNav li {
+    margin-left: 40px;
+  }
+  nav .desktopNav li a {
+    color: #E5E5E5;
+  }
+  nav .nav3rdsect {
+    margin-right: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  nav .nav3rdsect button {
+    position: relative;
+    padding: 0.5rem 0.4rem;
+    padding-left: 25px;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #E5E5E5;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #FFCC17;
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+    -webkit-box-shadow: 0 4px 15px 0 #FFCC17;
+            box-shadow: 0 4px 15px 0 #FFCC17;
+    -webkit-transform-origin: buttom left;
+            transform-origin: buttom left;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  nav .nav3rdsect button::before {
+    content: "Contact us";
+    color: #FFCC17;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem 0.4rem;
+    text-align: center;
+    border-radius: 7px;
+    background-color: #fff;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: buttom left;
+            transform-origin: buttom left;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    -webkit-box-shadow: #E5E5E5;
+            box-shadow: #E5E5E5;
+  }
+  nav .nav3rdsect button:hover::before {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    -webkit-transform-origin: bottom left;
+            transform-origin: bottom left;
+  }
+  nav .nav3rdsect p, nav .nav3rdsect button {
+    padding-right: 40px;
+  }
+  nav .mobileNav {
+    display: none;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+/*# sourceMappingURL=index.css.map */

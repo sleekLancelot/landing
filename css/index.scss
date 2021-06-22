@@ -1,0 +1,17 @@
+@import './_nav.scss';
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  // overide default links
+  a:link{
+    text-decoration: none;
+  }
+
+  li{
+      list-style-type: none;
+  }
