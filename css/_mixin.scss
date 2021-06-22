@@ -1,51 +1,55 @@
 /** Variables **/
+
 // colors
 $primary-color: #6832D4;
 $text-color: #E5E5E5;
 $yellow: #FFCC17;
-/** Variables **/
+$dark-text: #150435;
 
+/** Variables **/
 
 @mixin flex-center($direction: row) {
     display: flex;
     flex-flow: $direction;
     justify-content: center;
     align-items: center;
-  }
-  @mixin flex-btw($direction: row, $wrap: nowrap) {
+}
+
+@mixin flex-btw($direction: row, $wrap: nowrap) {
     display: flex;
     flex-flow: $direction;
     justify-content: space-between;
     align-items: center;
     flex-wrap: $wrap;
-  }
-  @mixin flex-even($direction: row, $wrap: nowrap) {
+}
+
+@mixin flex-even($direction: row, $wrap: nowrap) {
     display: flex;
     flex-flow: $direction;
     justify-content: space-around;
     align-items: center;
     flex-wrap: $wrap;
-  }
-  
-  @mixin button($content,$bgcolor:$yellow,$color:$text-color,$shadowcolor:$yellow) {
-      position: relative;
-      padding: 0.5rem 0.4rem;
-      padding-left: 25px;
-      text-align: center;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      color: $color;
-      overflow: hidden;
-      border-radius: 10px;
-      background: $bgcolor;
-      cursor: pointer;
-      border: none;
-      border-radius: 7px;
-      transition: all 500ms ease;
-      box-shadow: 0 4px 15px 0 $shadowcolor;
-      transform-origin: buttom left;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      &::before{
+}
+
+@mixin button($content, $bgcolor:$yellow, $color:$text-color, $shadowcolor:$yellow) {
+    position: relative;
+    padding: 0.5rem 0.4rem;
+    padding-left: 25px;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: $color;
+    overflow: hidden;
+    border-radius: 10px;
+    background: $bgcolor;
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    transition: all 500ms ease;
+    box-shadow: 0 4px 15px 0 $shadowcolor;
+    transform-origin: buttom left;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    &::before {
         content: $content;
         color: $bgcolor;
         position: absolute;
@@ -60,10 +64,10 @@ $yellow: #FFCC17;
         transform: scale(0);
         transform-origin: buttom left;
         transition: all .5s ease;
-        box-shadow: $color;    
-      }
-      &:hover::before {
+        box-shadow: $color;
+    }
+    &:hover::before {
         transform: scale(1, 1);
         transform-origin: bottom left;
     }
-  }
+}
