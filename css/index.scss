@@ -1,17 +1,178 @@
 @import './_nav.scss';
-
-
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-  }
-  
-  // overide default links
-  a:link{
-    text-decoration: none;
-  }
+    font-family: 'Roboto', sans-serif;
+}
 
-  li{
-      list-style-type: none;
-  }
+// overide default links
+a:link {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.hero {
+    padding: 20px 80px;
+    background: $primary-color;
+    height: 696px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 13px solid #FFCC17;
+}
+
+.hero_text {
+    margin-top: 100px;
+    >* {
+        color: #fff;
+    }
+    h1 {
+        font-size: 60px;
+    }
+    p {
+        line-height: 140%;
+        margin-top: 22px;
+    }
+    .cta {
+        margin-top: 22px;
+        background: #FFCC17;
+        border-radius: 3px;
+        width: 150px;
+        height: 41.52px;
+        display: grid;
+        place-items: center;
+        font-weight: 600;
+    }
+}
+
+.hero_image {
+    img {
+        width: 100%;
+    }
+}
+
+.description {
+    display: grid;
+    gap: 76px;
+    grid-template-columns: 1fr 1fr;
+    height: 600px;
+    align-items: center;
+    padding: 0 50px;
+    .image {
+        display: flex;
+        justify-content: flex-end;
+        img {
+            width: 419px;
+            height: 415px;
+        }
+    }
+    .description_text {
+        h2 {
+            font-size: 30px;
+            color: $dark-text;
+            font-weight: 800;
+        }
+        p {
+            margin-top: 1rem;
+            width: 350px;
+            font-weight: 400;
+            color: $dark-text;
+            line-height: 140%;
+        }
+    }
+}
+
+.services {
+    height: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h3 {
+        margin: 40px 0 40px;
+        font-size: 28px;
+        letter-spacing: 1px;
+    }
+    .service-list {
+        max-width: 800px;
+        margin: 0 auto;
+        display: grid;
+        gap: 55px;
+        grid-template-columns: 1fr 1fr;
+        .service {
+            width: 301px;
+            .service-description {
+                font-weight: 600;
+                color: $dark-text;
+                margin: 14px 0 13px 0;
+            }
+            .service-cta {
+                display: flex;
+                height: 33px;
+                width: 111px;
+                border: 1px solid $primary-color;
+                border-radius: 64px;
+                align-items: center;
+                color: $primary-color;
+                align-items: center;
+                padding: 0 0 0 1rem;
+                font-size: 12px;
+                .cta-icon {
+                    height: 25px;
+                    width: 25px;
+                    border-radius: 50%;
+                    background: #FFCC17;
+                    display: grid;
+                    place-items: center;
+                    margin-left: auto;
+                    margin-right: 0.3rem;
+                }
+            }
+            .service-image {
+                height: 121px;
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                border-radius: 5px;
+                position: relative;
+                overflow: hidden;
+                display: grid;
+                place-items: center;
+                .service-text {
+                    font-size: 24px;
+                    color: #fff;
+                    z-index: 2;
+                    font-weight: 800;
+                    letter-spacing: 1px;
+                }
+                &::after {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    background: rgba(0, 0, 0, 0.082);
+                    content: '';
+                }
+            }
+        }
+    }
+}
+
+.loans>.service-image {
+    background-image: url('../images/loans.png');
+}
+
+.real-estate>.service-image {
+    background-image: url('../images/real_estate.png');
+}
+
+.savings>.service-image {
+    background-image: url('../images/target_saving.png');
+}
+
+.investment>.service-image {
+    background-image: url('../images/investment.png');
+}

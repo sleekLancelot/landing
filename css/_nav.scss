@@ -1,17 +1,18 @@
 @import './_mixin.scss';
-
-@media screen and (min-width:900px){
-    nav{
+@media screen and (min-width:900px) {
+    nav {
         @include flex-btw;
         background: $primary-color;
         height: 90px;
         color: $text-color;
         font-size: 15px;
         line-height: 18.68px;
-        .logo{
+        padding: 0 50px;
+        border-bottom: 1px solid rgba(229, 229, 229, 0.3);
+        .logo {
             display: flex;
             padding: 20px;
-            .circle{
+            .circle {
                 display: block;
                 width: 30px;
                 height: 30px;
@@ -20,39 +21,35 @@
                 margin: auto 10px;
             }
             // p{
-                
             // }
         }
-
         // .lg-nav_ui{
         //     position: relative;
         //     top: -60px;
         //     @include flex-btw;
         // }
-
-        .desktopNav{
+        .desktopNav {
             @include flex-center;
             flex: 1;
-            li{
+            li {
                 margin-left: 40px;
-                a{
+                a {
                     color: $text-color;
                 }
             }
         }
-
-        .nav3rdsect{
+        .nav3rdsect {
             margin-right: 30px;
             @include flex-btw;
-            button{
-                @include button($content:'Contact us');
+            button {
+                @include button($content: 'Contact us');
             }
-            p,button{
+            p,
+            button {
                 padding-right: 40px;
             }
         }
-
-        .mobileNav{
+        .mobileNav {
             display: none;
         }
     }

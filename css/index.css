@@ -22,6 +22,8 @@
     color: #E5E5E5;
     font-size: 15px;
     line-height: 18.68px;
+    padding: 0 50px;
+    border-bottom: 1px solid rgba(229, 229, 229, 0.3);
   }
   nav .logo {
     display: -webkit-box;
@@ -128,7 +130,8 @@
     -webkit-transform-origin: bottom left;
             transform-origin: bottom left;
   }
-  nav .nav3rdsect p, nav .nav3rdsect button {
+  nav .nav3rdsect p,
+  nav .nav3rdsect button {
     padding-right: 40px;
   }
   nav .mobileNav {
@@ -141,6 +144,7 @@
           box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 a:link {
@@ -149,5 +153,206 @@ a:link {
 
 li {
   list-style-type: none;
+}
+
+.hero {
+  padding: 20px 80px;
+  background: #6832D4;
+  height: 696px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  border-bottom: 13px solid #FFCC17;
+}
+
+.hero_text {
+  margin-top: 100px;
+}
+
+.hero_text > * {
+  color: #fff;
+}
+
+.hero_text h1 {
+  font-size: 60px;
+}
+
+.hero_text p {
+  line-height: 140%;
+  margin-top: 22px;
+}
+
+.hero_text .cta {
+  margin-top: 22px;
+  background: #FFCC17;
+  border-radius: 3px;
+  width: 150px;
+  height: 41.52px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+}
+
+.hero_image img {
+  width: 100%;
+}
+
+.description {
+  display: -ms-grid;
+  display: grid;
+  gap: 76px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  height: 600px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 50px;
+}
+
+.description .image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.description .image img {
+  width: 419px;
+  height: 415px;
+}
+
+.description .description_text h2 {
+  font-size: 30px;
+  color: #150435;
+  font-weight: 800;
+}
+
+.description .description_text p {
+  margin-top: 1rem;
+  width: 350px;
+  font-weight: 400;
+  color: #150435;
+  line-height: 140%;
+}
+
+.services {
+  height: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.services h3 {
+  margin: 40px 0 40px;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.services .service-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  gap: 55px;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.services .service-list .service {
+  width: 301px;
+}
+
+.services .service-list .service .service-description {
+  font-weight: 600;
+  color: #150435;
+  margin: 14px 0 13px 0;
+}
+
+.services .service-list .service .service-cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 33px;
+  width: 111px;
+  border: 1px solid #6832D4;
+  border-radius: 64px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #6832D4;
+  align-items: center;
+  padding: 0 0 0 1rem;
+  font-size: 12px;
+}
+
+.services .service-list .service .service-cta .cta-icon {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background: #FFCC17;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-left: auto;
+  margin-right: 0.3rem;
+}
+
+.services .service-list .service .service-image {
+  height: 121px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.services .service-list .service .service-image .service-text {
+  font-size: 24px;
+  color: #fff;
+  z-index: 2;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.services .service-list .service .service-image::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.082);
+  content: '';
+}
+
+.loans > .service-image {
+  background-image: url("../images/loans.png");
+}
+
+.real-estate > .service-image {
+  background-image: url("../images/real_estate.png");
+}
+
+.savings > .service-image {
+  background-image: url("../images/target_saving.png");
+}
+
+.investment > .service-image {
+  background-image: url("../images/investment.png");
 }
 /*# sourceMappingURL=index.css.map */
