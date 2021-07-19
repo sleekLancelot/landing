@@ -30,6 +30,9 @@
         @include mq('phone-wide'){
             width: 200vw;
         }
+        @media (width:823px) and (orientation:landscape){
+            width: 130vw;
+        }
         &.navbar.fixed{
             position: fixed;
             box-shadow: $nav-shadow;
@@ -80,35 +83,57 @@
                 padding-right: 40px;
             }
         }
-        i.fa-bars{
-            position: relative;
-            top: 40px;
-            left: 40px;
-            width: 40px;
-            height: 40px;
-            transform: scale(3);
-            color: $text-color;
-            display: none;
-            @include mq('phone-wide'){
-                display: inline-block;
-            }
-        }
         .mobileNav {
             display: none;
-            position: relative;
-            top: 90px;
-            left: 0px;
-            z-index: 5000;
-            width: 100vw;
-            height: 100vh;
-            background: grey;
-            color: #000;
-            // user-select: none;
-            &.open{
+            width: 100%;
+            padding: 10px 0;
+            height: 90px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            background: $primary-color;
+            box-shadow: 2px -3px 5px 1px rgba(0, 0, 0, 0.05);
+            z-index: 3000;
+            overflow: hidden !important;
+           
+            &:hover a {
+                /* filter: blur(1px); */
+                filter: opacity(0.5);
+            }
+            a:hover {
+                /* filter: blur(0px); */
+                filter: opacity(1);
+            }
+            li{
+                a {
+                    @include flex-center(column);
+                    transition: all 300ms ease;
+                    color: $yellow;
+                    i {
+                        font-size: 30px;
+                    }
+                    span {
+                        padding-top: 5px;
+                        font-size: 15px;
+                        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+                            'Lucida Sans', Arial, sans-serif;
+                    }
+                }  
+            } 
 
-            }
             @include mq('phone-wide'){
-                // @include flex-center(column);
+                @include flex-even;
             }
+            @include mq('phone-small'){
+                .navLink{
+                    i{
+                        font-size: 20px;
+                    }
+                    a{
+                        font-size: 12px;
+                    }
+                }
+            }
+            
         }
     }

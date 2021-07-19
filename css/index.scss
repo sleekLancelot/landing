@@ -22,8 +22,11 @@ p{
     letter-spacing: 0.01em;
 }
 
-body > *{
+body{
     overflow-x: hidden !important;
+    @include mq('phone-small'){
+        overflow-x: hidden !important;
+    }
 }
 
 .circle {
@@ -49,6 +52,9 @@ body > *{
         width: 120vw;
         min-width: 100vw;
         height: auto;
+    }
+    @media (width:823px) and (orientation:landscape){
+        width: 130vw;
     }
     @include mq('phablet'){
         width: 170vw;
@@ -105,6 +111,10 @@ body > *{
         line-height: 1.7em;
         margin-left: 200px;
     }
+    @include mq('phone-small'){
+        margin-left: 100px;
+        width: 130vw;
+    }
     .image {
         display: flex;
         justify-content: flex-end;
@@ -142,6 +152,9 @@ body > *{
     @include mq('phablet'){
         position: relative;
         left: 200px;
+    }
+    @include mq('phone-small'){
+        left: 150px;
     }
 }
 
@@ -263,6 +276,9 @@ body > *{
         width: 120vw;
         min-width: 100vw;
     }
+    @media (width:823px) and (orientation:landscape){
+        width: 130vw;
+    }
     @include mq('phablet'){
         width: 170vw;
         position: relative;
@@ -358,6 +374,9 @@ footer{
     @include mq('tablet'){
         width: 120vw;
         min-width: 100vw;
+    }
+    @media (width:823px) and (orientation:landscape){
+        width: 130vw;
     }
     @include mq('phablet'){
         width: 170vw;
