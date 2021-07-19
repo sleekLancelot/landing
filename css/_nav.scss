@@ -1,41 +1,69 @@
-@import './_mixin.scss';
-@media screen and (min-width:900px) {
+@import './_mixinAndVariables.scss';
+
+.logo {
+    display: flex;
+    padding: 20px;
+    cursor: pointer;
+    p{
+        color: $text-color;
+    }
+}
+
+
     nav {
         @include flex-btw;
         background: $primary-color;
         height: 90px;
+        width: 100%;
+        min-width: 100vw;
         color: $text-color;
         font-size: 15px;
         line-height: 18.68px;
         padding: 0 50px;
         border-bottom: 1px solid rgba(229, 229, 229, 0.3);
-        .logo {
-            display: flex;
-            padding: 20px;
-            .circle {
-                display: block;
-                width: 30px;
-                height: 30px;
-                background: #C4C4C4;
-                border-radius: 50%;
-                margin: auto 10px;
-            }
-            // p{
-            // }
+        @include mq('tablet'){
+            width: 120vw;
         }
-        // .lg-nav_ui{
-        //     position: relative;
-        //     top: -60px;
-        //     @include flex-btw;
-        // }
+        @include mq('phablet'){
+            width: 170vw;
+        }
+        @include mq('phone-wide'){
+            width: 200vw;
+        }
+        &.navbar.fixed{
+            position: fixed;
+            box-shadow: $nav-shadow;
+            width: 100%;
+            z-index: 1000;
+        }
         .desktopNav {
             @include flex-center;
             flex: 1;
             li {
                 margin-left: 40px;
+                position: relative;
                 a {
                     color: $text-color;
+                    &::before{
+                        position: absolute;
+                        top: 25px;
+                        left: 50%;
+                        bottom: 10px;
+                        height: 2px;
+                        width: 0%;
+                        content: "";
+                        transform: scale(-1);
+                        background: linear-gradient(to left, $yellow 0%, $yellow 100%);
+                        transition: all 300ms ease;
+                    }
                 }
+                &:hover a::before{
+                    left: 0;
+                    width: 100%;
+                }
+            }
+            @include mq('phone-wide'){
+                display: none;
             }
         }
         .nav3rdsect {
@@ -44,13 +72,43 @@
             button {
                 @include button($content: 'Contact us');
             }
-            p,
+            a{
+                color: $text-color;
+                padding-right: 40px;
+            }
             button {
                 padding-right: 40px;
             }
         }
+        i.fa-bars{
+            position: relative;
+            top: 40px;
+            left: 40px;
+            width: 40px;
+            height: 40px;
+            transform: scale(3);
+            color: $text-color;
+            display: none;
+            @include mq('phone-wide'){
+                display: inline-block;
+            }
+        }
         .mobileNav {
             display: none;
+            position: relative;
+            top: 90px;
+            left: 0px;
+            z-index: 5000;
+            width: 100vw;
+            height: 100vh;
+            background: grey;
+            color: #000;
+            // user-select: none;
+            &.open{
+
+            }
+            @include mq('phone-wide'){
+                // @include flex-center(column);
+            }
         }
     }
-}

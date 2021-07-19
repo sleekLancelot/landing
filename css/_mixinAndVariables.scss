@@ -5,8 +5,34 @@ $primary-color: #6832D4;
 $text-color: #E5E5E5;
 $yellow: #FFCC17;
 $dark-text: #150435;
+$nav-shadow:0px 2px 6px #d1d6de4d;
+
+$breakpoints: (
+    "phone-small":        320px,
+    "phone":        400px,
+    "phone-wide":   480px,
+    "phablet":      560px,
+    "tablet-small": 640px,
+    "tablet":       768px,
+    "fluid-out":960px,
+    "tablet-wide":  1024px,
+    "desktop":      1248px,
+    "desktop-med":  1350px,
+    "desktop-wide": 1440px,
+    "excess": 2000px
+);
 
 /** Variables **/
+
+@mixin mq($width, $type: max) {
+    @if map_has_key($breakpoints, $width) {
+        $width: map_get($breakpoints, $width);
+        
+        @media only screen and (#{$type}-width: $width) {
+            @content;
+        }
+    }
+}
 
 @mixin flex-center($direction: row) {
     display: flex;
@@ -31,7 +57,7 @@ $dark-text: #150435;
     flex-wrap: $wrap;
 }
 
-@mixin button($content, $bgcolor:$yellow, $color:$text-color, $shadowcolor:$yellow) {
+@mixin button($content, $bgcolor:$yellow, $color:$dark-text, $shadowcolor:$yellow) {
     position: relative;
     padding: 0.5rem 0.4rem;
     padding-left: 25px;
